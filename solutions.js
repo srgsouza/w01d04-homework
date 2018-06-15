@@ -50,3 +50,17 @@ console.log(sumDigits(123));
   }
 
   console.log(Pythagorean(3, 4));
+
+// Write a function sumArray that takes an array as an argument.The array should contain numbers.The function should return the sum of the numbers in the array.Use a for loop within the function to iterate over the array and sum the contents.Use a variable such as
+//   let sum = 0;
+// that will accumulate value within the loop.Expected result:
+
+let sum = 0;
+const sumArray = (arr) => {
+  for (let index = 0; index < arr.length; index++) {
+    sum += arr[index];
+  }
+  return sum;
+}
+
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
