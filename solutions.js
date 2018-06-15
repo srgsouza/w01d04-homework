@@ -19,3 +19,34 @@ const checkPalindrome = (string) => {
 
 console.log(checkPalindrome("Radar"));
 console.log(checkPalindrome("Borscht"));
+
+
+// Write a function sumDigits that accepts a number and returns the sum of its digits.
+const sumDigits = (num) => {
+  let lastDigit = 0;
+  let sumOfAllDigits = 0;
+  while (num != 0) {
+    lastDigit = num % 10;  // grabs the last digit of the number
+    // console.log(`Setting lastDigit \(num % 10\) ${lastDigit}`);
+    sumOfAllDigits += lastDigit;
+    // Decrement num. Divide by 10 to remove last digit, then parse the string to return an integer.
+    num = parseInt(num / 10); 
+  }
+  return sumOfAllDigits;
+}
+console.log(sumDigits(123));
+
+
+
+// Write a function calculateSide that takes two arguments: sideA and sideB, and returns the solution for sideC using the Pythagorean theorem.
+
+//   hint: discover the Pythagorean Theorem on a website called google.com
+// hint: checkout the Math methods in javascript
+
+// console.log(calculateSide(8, 6));
+
+  const Pythagorean = (sideA, sideB) => {
+    return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2))
+  }
+
+  console.log(Pythagorean(3, 4));
