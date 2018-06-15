@@ -9,12 +9,8 @@
 // Write a function checkPalindrome that accepts a single argument, a string.The function should return true(Boolean) if the string is a palindrome, false if it is not.Make sure your function will give the correct answer for words with capital letters.
 
 const checkPalindrome = (string) => {
-  let reverseString = string.split('').reverse('').join('');
-  if (string.toLowerCase() === reverseString.toLowerCase()) {
-    return true;
-  } else {
-    return false;
-  }
+  let reverseString = string.split('').reverse('').join(''); //splits in an array, then reverse. join turns the array into a string.
+  return string.toLowerCase() === reverseString.toLowerCase();
 }
 
 console.log(checkPalindrome("Radar"));
@@ -104,4 +100,18 @@ const printPrimes = (num) => {
   }
 }
 printPrimes(97);
+
+// Write a function insertDash that accepts a number as a parameter and returns a string with a dash inserted between any consecutive odd numbers.There should not be a dash at the end, it goes only between numbers.
+const insertDash = (num) => {
+  const temp = num.toString().split('');
+  // console.log(temp);
+  for (let i = 0; i < temp.length; i++) {
+    if ((temp[i] % 2 === 1) && ((temp[i + 1]) % 2 === 1)) { // checks if i and i + 1 are odd numbers
+      temp[i] = temp[i] + '-'    
+    }
+  }
+  const mtemp = temp.join('');
+  return mtemp;
+} 
+console.log(insertDash(454793));
 
